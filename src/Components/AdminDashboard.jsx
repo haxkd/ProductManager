@@ -48,15 +48,15 @@ const AdminDashboard = () => {
                     {
                         label: 'Products',
                         data: productReport.productsData,
-                        backgroundColor: 'rgba(66, 255, 117, 0.2)',
-                        borderColor: 'rgba(66, 255, 117, 1)',
+                        backgroundColor: 'rgba(255, 193, 7, 0.2)',
+                        borderColor: 'rgba(255, 193, 7, 1)',
                         borderWidth: 1
                     },
                     {
                         label: 'Sales',
                         data: productReport.salesData,
-                        backgroundColor: 'rgba(255, 193, 7, 0.2)',
-                        borderColor: 'rgba(255, 193, 7, 1)',
+                        backgroundColor: 'rgba(66, 255, 117, 0.2)',
+                        borderColor: 'rgba(66, 255, 117, 1)',
                         borderWidth: 1
                     },
                     {
