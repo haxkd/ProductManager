@@ -1,7 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import AdminDashboard from './Components/AdminDashboard';
-
+import AdminProducts from './Components/AdminProducts'
+import AdminProduct from './Components/AdminProduct';
+import AdminOrders from './Components/AdminOrders';
 
 /*
 
@@ -14,6 +16,7 @@ import AdminDashboard from './Components/AdminDashboard';
 3. Products ==> show product details
   a. name
   b. description
+  b. category
   c. quantity
   d. org price
   e. discount price
@@ -34,6 +37,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<AdminDashboard />} />
+        <Route path="/products" element={<AdminProducts />} />
+        <Route path="/products/:id" element={<AdminProduct />} />
+        <Route path="/orders" element={<AdminOrders />} />
       </Routes>
     </>
   );

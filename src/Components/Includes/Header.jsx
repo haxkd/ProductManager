@@ -7,12 +7,12 @@ function Header() {
   return (
     <Navbar expand="lg" className="navbar-dark">
       <Container>
-        <Navbar.Brand href="#home">ProductManager</Navbar.Brand>
+        <Link className='navbar-brand' to='/'>ProductManager</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Link className='nav-link' to="/products">Products</Link>
-            <Link className='nav-link' to="/order">Orders</Link>
+            <Link className='nav-link' to="/orders">Orders</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
