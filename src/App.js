@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import AdminDashboard from './Components/AdminDashboard';
+
+
+/*
+
+1. Header 
+  a. Products
+  b. Orders
+2. Admin Dashboard
+  a. Basic reports of
+      sales, product, returns
+3. Products ==> show product details
+  a. name
+  b. description
+  c. quantity
+  d. org price
+  e. discount price
+  f. stock
+  g. iamges[3]
+
+4. single product to edit
+5. Orders
+  a. Prouct Details
+  b. user details
+  c. delivery address
+  d.  status (pending, processing, travel, delivered)
+
+*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<AdminDashboard />} />
+      </Routes>
+    </>
   );
 }
 
