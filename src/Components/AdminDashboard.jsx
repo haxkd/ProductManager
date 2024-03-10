@@ -107,6 +107,9 @@ const AdminDashboard = () => {
             if (chartInstance) {
                 chartInstance.destroy();
             }
+            if (usersInstance) {
+                usersInstance.destroy();
+            }
         };
     }, [productReport]);
 
@@ -114,8 +117,8 @@ const AdminDashboard = () => {
         <>
             <Header />
             <div className="container mt-4">
-                <div className="row">
-                    <div className="col-lg">
+                <div className="row g-4">
+                    <div className="col-6 col-lg">
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Total Users</h5>
@@ -123,7 +126,7 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg">
+                    <div className="col-6 col-lg">
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Total Products</h5>
@@ -131,7 +134,7 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg">
+                    <div className="col-6 col-lg">
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Total Orders</h5>
@@ -139,7 +142,7 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg">
+                    <div className="col-6 col-lg">
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Total Returns</h5>
