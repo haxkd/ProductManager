@@ -56,7 +56,7 @@ const AdminProduct = () => {
         <>
             <Header />
             <div className="container mt-4">
-                <h1 className="mb-4 text-center text-purple">Edit Product</h1>
+                <h1 className="text-center text-purple mainheading">Edit Product</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name:</label>
@@ -88,7 +88,6 @@ const AdminProduct = () => {
                     </div>
                     <div className="row">
                         <div className="col-6 text-center">
-
                             <button type="submit" className="btn btn-purple" onClick={handleUpdate}>Update Product</button>
                         </div>
                         <div className="col-6 text-center">

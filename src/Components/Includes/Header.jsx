@@ -13,6 +13,7 @@ function Header() {
           <Nav className="ms-auto">
             <Link className='nav-link' to="/products">Products</Link>
             <Link className='nav-link' to="/orders">Orders</Link>
+            <Link className='nav-link' to="/users">Users</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

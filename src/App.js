@@ -5,6 +5,9 @@ import AdminProducts from './Components/AdminProducts'
 import AdminProduct from './Components/AdminProduct';
 import AdminOrders from './Components/AdminOrders';
 import { ToastContainer } from 'react-toastify';
+import AdminOrder from './Components/AdminOrder';
+import AdminUsers from './Components/AdminUsers';
+import AdminUser from './Components/AdminUser';
 
 /*
 
@@ -29,7 +32,7 @@ import { ToastContainer } from 'react-toastify';
   a. Prouct Details
   b. user details
   c. delivery address
-  d.  status (pending, processing, travel, delivered)
+  d.  status (pending, processing, shipped, delivered, cancelled)
 
 */
 
@@ -38,9 +41,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<AdminDashboard />} />
-        <Route path="/products" element={<AdminProducts />} />
+        <Route path="/products/" element={<AdminProducts />} />
         <Route path="/products/:id" element={<AdminProduct />} />
-        <Route path="/orders" element={<AdminOrders />} />
+        <Route path="/orders/" element={<AdminOrders />} />
+        <Route path="/orders/:id" element={<AdminOrder />} />
+        <Route path="/users/" element={<AdminUsers />} />
+        <Route path="/users/:id" element={<AdminUser />} />
       </Routes>
       <ToastContainer />
     </>

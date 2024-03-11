@@ -24,7 +24,7 @@ const AdminProducts = () => {
                 $(tableRef.current).DataTable().destroy();
             }
         };
-    }, [products])
+    }, [products]);
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -153,7 +153,7 @@ const AdminProducts = () => {
         <>
             <Header />
             <div className="container mt-4">
-                <h1 className="mb-4 text-center text-purple">All Products</h1>
+                <h1 className="text-center text-purple mainheading">Products</h1>
                 <div className="card table-responsive p-1">
                     <table ref={tableRef} className="table table-hover table-striped bg-purple text-purple">
                         <thead>
@@ -178,8 +178,8 @@ const AdminProducts = () => {
                                     <td>{product.quantity}</td>
                                     <td>${product.originalPrice.toFixed(2)}</td>
                                     <td>${product.discountPrice.toFixed(2)}</td>
-                                    <td>{product.date}</td>
                                     <td>{product.stock}</td>
+                                    <td>{product.date}</td>
                                     <td>
                                         <Link to={`/products/${product.id}`} className="btn btn-purple btn-sm">View</Link>
                                     </td>

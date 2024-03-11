@@ -59,3 +59,19 @@ code {
 table.table.dataTable>:not(caption)>*>* {
     background-color: white!important;
 }
+
+.mainheading{
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.mainheading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  width: 20%;
+  height: 2px;
+  background-color: var(--purple);
+}
