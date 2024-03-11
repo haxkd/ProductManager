@@ -264,7 +264,7 @@ const AdminDashboard = () => {
                             <div className="card-body">
                                 <h5 className="card-title d-flex justify-content-between"><span>Notifications</span> <Link className='nav-link text-dark' to='/products' >See all</Link></h5>
                                 <ul class="list-group mt-3 mb-3">
-                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <li class="list-group-item gap-10 d-flex justify-content-between lh-sm">
                                         <span class="text-body-secondary">
                                             <i class="fa-solid fa-check-double text-success"></i>
                                         </span>
@@ -273,7 +273,7 @@ const AdminDashboard = () => {
                                             <small class="text-body-secondary">10 minutes ago</small>
                                         </div>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <li class="list-group-item gap-10 d-flex justify-content-between lh-sm">
                                         <span class="text-body-secondary">
                                             <i class="fa-brands fa-get-pocket text-info"></i>
                                         </span>
@@ -282,7 +282,7 @@ const AdminDashboard = () => {
                                             <small class="text-body-secondary"> 20 minutes ago</small>
                                         </div>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <li class="list-group-item gap-10 d-flex justify-content-between lh-sm">
                                         <span class="text-body-secondary">
                                             <i class="fa-solid fa-circle-exclamation text-danger"></i>
                                         </span>
@@ -291,7 +291,7 @@ const AdminDashboard = () => {
                                             <small class="text-body-secondary">20 minutes ago</small>
                                         </div>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <li class="list-group-item gap-10 d-flex justify-content-between lh-sm">
                                         <span class="text-body-secondary">
                                             <i class="fa-solid fa-check-double text-success"></i>
                                         </span>
@@ -300,7 +300,7 @@ const AdminDashboard = () => {
                                             <small class="text-body-secondary"> 30 minutes ago</small>
                                         </div>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <li class="list-group-item gap-10 d-flex justify-content-between lh-sm">
                                         <span class="text-body-secondary">
                                             <i class="fa-solid fa-circle-exclamation text-danger"></i>
                                         </span>
@@ -328,77 +328,79 @@ const AdminDashboard = () => {
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Recent Orders</h5>
-                                <table className="table table-hover table-striped bg-purple text-purple">
-                                    <thead>
-                                        <tr>
-                                            <th className='text-purple'>#</th>
-                                            <th className='text-purple'>User</th>
-                                            <th className='text-purple'>Product</th>
-                                            <th className='text-purple'>Date</th>
-                                            <th className='text-purple'>Price</th>
-                                            <th className='text-purple'>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>John Doe</td>
-                                            <td>Samsung Galaxy S21 Ultra</td>
-                                            <td>15/03/2024</td>
-                                            <td>$150.99</td>
-                                            <td>Processing</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jane Smith</td>
-                                            <td>Apple MacBook Pro 13</td>
-                                            <td>16/03/2024</td>
-                                            <td>$99.50</td>
-                                            <td>Shipped</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Michael Johnson</td>
-                                            <td>Nike Air Zoom Pegasus 38</td>
-                                            <td>17/03/2024</td>
-                                            <td>$249.75</td>
-                                            <td>Delivered</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>David Brown</td>
-                                            <td>KitchenAid Stand Mixer</td>
-                                            <td>19/03/2024</td>
-                                            <td>$199.00</td>
-                                            <td>Shipped</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Jessica Taylor</td>
-                                            <td>GoPro HERO9 Black</td>
-                                            <td>20/03/2024</td>
-                                            <td>$299.99</td>
-                                            <td>Processing</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Matthew Martinez</td>
-                                            <td>Fitbit Charge 4</td>
-                                            <td>21/03/2024</td>
-                                            <td>$89.50</td>
-                                            <td>Shipped</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Christopher Lee</td>
-                                            <td>LEGO Star Wars Millennium Falcon</td>
-                                            <td>22/03/2024</td>
-                                            <td>$179.99</td>
-                                            <td>Processing</td>
-                                        </tr>
-                                    </tbody>
+                                <div className="table-responsive">
 
-                                </table>
+                                    <table className="table table-hover table-striped bg-purple text-purple">
+                                        <thead>
+                                            <tr>
+                                                <th className='text-purple'>#</th>
+                                                <th className='text-purple'>User</th>
+                                                <th className='text-purple'>Product</th>
+                                                <th className='text-purple'>Date</th>
+                                                <th className='text-purple'>Price</th>
+                                                <th className='text-purple'>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John Doe</td>
+                                                <td>Samsung Galaxy S21 Ultra</td>
+                                                <td>15/03/2024</td>
+                                                <td>$150.99</td>
+                                                <td>Processing</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jane Smith</td>
+                                                <td>Apple MacBook Pro 13</td>
+                                                <td>16/03/2024</td>
+                                                <td>$99.50</td>
+                                                <td>Shipped</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Michael Johnson</td>
+                                                <td>Nike Air Zoom Pegasus 38</td>
+                                                <td>17/03/2024</td>
+                                                <td>$249.75</td>
+                                                <td>Delivered</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>David Brown</td>
+                                                <td>KitchenAid Stand Mixer</td>
+                                                <td>19/03/2024</td>
+                                                <td>$199.00</td>
+                                                <td>Shipped</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Jessica Taylor</td>
+                                                <td>GoPro HERO9 Black</td>
+                                                <td>20/03/2024</td>
+                                                <td>$299.99</td>
+                                                <td>Processing</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Matthew Martinez</td>
+                                                <td>Fitbit Charge 4</td>
+                                                <td>21/03/2024</td>
+                                                <td>$89.50</td>
+                                                <td>Shipped</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Christopher Lee</td>
+                                                <td>LEGO Star Wars Millennium Falcon</td>
+                                                <td>22/03/2024</td>
+                                                <td>$179.99</td>
+                                                <td>Processing</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

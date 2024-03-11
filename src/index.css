@@ -75,3 +75,6 @@ table.table.dataTable>:not(caption)>*>* {
   height: 2px;
   background-color: var(--purple);
 }
+.gap-10{
+  gap: 10px;
+}
