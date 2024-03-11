@@ -143,8 +143,6 @@ const AdminOrders = () => {
             }
         };
 
-
-
         fetchOrders();
     }, []);
 

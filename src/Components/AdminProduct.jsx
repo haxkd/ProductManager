@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Includes/Header';
 import Footer from './Includes/Footer';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const AdminProduct = () => {
     const [editedProduct, setEditedProduct] = useState({});
@@ -15,6 +15,7 @@ const AdminProduct = () => {
                     description: 'Samsung\'s flagship smartphone with 108MP camera, 5G capability, and 120Hz display.',
                     category: 'Electronics',
                     quantity: 100,
+                    sold: 30,
                     originalPrice: 1199.99,
                     discountPrice: 999.99,
                     stock: 1
@@ -26,7 +27,6 @@ const AdminProduct = () => {
 
         fetchProduct();
     }, []);
-
 
 
     const handleChange = (e) => {
@@ -41,15 +41,15 @@ const AdminProduct = () => {
         e.preventDefault();
     };
 
-    function handleUpdate(){
+    function handleUpdate() {
         toast.success("Product Updated !", {
             position: "top-right"
-          });
+        });
     }
-    function handleDelete(){
+    function handleDelete() {
         toast.error("Cant Delete a product !", {
             position: "top-right"
-          });
+        });
     }
 
     return (
@@ -73,6 +73,10 @@ const AdminProduct = () => {
                     <div className="mb-3">
                         <label htmlFor="quantity" className="form-label">Quantity:</label>
                         <input type="number" className="form-control" id="quantity" name="quantity" value={editedProduct.quantity} onChange={handleChange} />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="sold" className="form-label">Sold:</label>
+                        <input type="number" className="form-control" id="sold" name="sold" value={editedProduct.sold} readOnly />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="originalPrice" className="form-label">Original Price:</label>

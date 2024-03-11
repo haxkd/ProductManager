@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef  } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import $ from 'jquery';
 import 'datatables.net-bs5';
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
@@ -10,15 +10,12 @@ const AdminProducts = () => {
     const [products, setProducts] = useState([]);
     const tableRef = useRef(null);
 
-
     useEffect(() => {
         if (products.length > 0 && tableRef.current) {
-            // Initialize DataTable only when products data is available
             $(tableRef.current).DataTable();
         }
 
         return () => {
-            // Destroy DataTable when component unmounts
             if ($.fn.DataTable.isDataTable(tableRef.current)) {
                 // eslint-disable-next-line react-hooks/exhaustive-deps
                 $(tableRef.current).DataTable().destroy();
@@ -36,9 +33,10 @@ const AdminProducts = () => {
                         description: 'Samsung\'s flagship smartphone with 108MP camera, 5G capability, and 120Hz display.',
                         category: 'Electronics',
                         quantity: 100,
+                        sold: 10,
                         originalPrice: 1199.99,
                         discountPrice: 999.99,
-                        date:"11/03/2024",
+                        date: "11/03/2024",
                         stock: 1
                     },
                     {
@@ -47,9 +45,10 @@ const AdminProducts = () => {
                         description: 'Powerful laptop with Apple M1 chip, 16GB RAM, and 512GB SSD storage.',
                         category: 'Computers',
                         quantity: 50,
+                        sold: 30,
                         originalPrice: 1499.99,
                         discountPrice: 1399.99,
-                        date:"10/03/2024",
+                        date: "10/03/2024",
                         stock: 2
                     },
                     {
@@ -58,9 +57,10 @@ const AdminProducts = () => {
                         description: 'Running shoes with responsive cushioning and breathable mesh upper.',
                         category: 'Sports & Outdoors',
                         quantity: 200,
+                        sold: 20,
                         originalPrice: 129.99,
                         discountPrice: 109.99,
-                        date:"12/03/2024",
+                        date: "12/03/2024",
                         stock: 0
                     },
                     {
@@ -69,9 +69,10 @@ const AdminProducts = () => {
                         description: 'Next-gen gaming console with 4K gaming, high-speed SSD, and immersive gaming experiences.',
                         category: 'Electronics',
                         quantity: 30,
+                        sold: 25,
                         originalPrice: 499.99,
                         discountPrice: 449.99,
-                        date:"09/03/2024",
+                        date: "09/03/2024",
                         stock: 4
                     },
                     {
@@ -80,9 +81,10 @@ const AdminProducts = () => {
                         description: 'Powerful stand mixer for baking and cooking with various attachments and multiple speed settings.',
                         category: 'Home & Kitchen',
                         quantity: 80,
+                        sold: 35,
                         originalPrice: 349.99,
                         discountPrice: 299.99,
-                        date:"13/03/2024",
+                        date: "13/03/2024",
                         stock: 1
                     },
                     {
@@ -91,9 +93,10 @@ const AdminProducts = () => {
                         description: 'Action camera with 5K video, 20MP photos, and waterproof design.',
                         category: 'Electronics',
                         quantity: 60,
+                        sold: 30,
                         originalPrice: 449.99,
                         discountPrice: 399.99,
-                        date:"10/03/2024",
+                        date: "10/03/2024",
                         stock: 0
                     },
                     {
@@ -102,9 +105,10 @@ const AdminProducts = () => {
                         description: 'Smart speaker with Alexa, compact design, and improved sound quality.',
                         category: 'Electronics',
                         quantity: 120,
+                        sold: 45,
                         originalPrice: 49.99,
                         discountPrice: 39.99,
-                        date:"08/03/2024",
+                        date: "08/03/2024",
                         stock: 7
                     },
                     {
@@ -113,9 +117,10 @@ const AdminProducts = () => {
                         description: 'Fitness tracker with built-in GPS, heart rate monitor, and sleep tracking.',
                         category: 'Sports & Outdoors',
                         quantity: 90,
+                        sold: 40,
                         originalPrice: 149.95,
                         discountPrice: 129.95,
-                        date:"09/03/2024",
+                        date: "09/03/2024",
                         stock: 9
                     },
                     {
@@ -124,9 +129,10 @@ const AdminProducts = () => {
                         description: 'Iconic Star Wars Millennium Falcon LEGO set with detailed interior and exterior.',
                         category: 'Toys & Games',
                         quantity: 40,
+                        sold: 60,
                         originalPrice: 159.99,
                         discountPrice: 139.99,
-                        date:"07/03/2024",
+                        date: "07/03/2024",
                         stock: 3
                     },
                     {
@@ -135,9 +141,10 @@ const AdminProducts = () => {
                         description: 'Multi-functional pressure cooker with 14 built-in smart programs for cooking various dishes.',
                         category: 'Home & Kitchen',
                         quantity: 70,
+                        sold: 50,
                         originalPrice: 99.95,
                         discountPrice: 89.95,
-                        date:"14/03/2024",
+                        date: "14/03/2024",
                         stock: 1
                     }
                 ]);
