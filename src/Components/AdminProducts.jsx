@@ -1,10 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef  } from 'react';
+import $ from 'jquery';
+import 'datatables.net-bs5';
+import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+
 import { Link } from 'react-router-dom';
 import Header from './Includes/Header'
 import Footer from './Includes/Footer'
 const AdminProducts = () => {
     const [products, setProducts] = useState([]);
+    const tableRef = useRef(null);
 
+
+    useEffect(() => {
+        if (products.length > 0 && tableRef.current) {
+            // Initialize DataTable only when products data is available
+            $(tableRef.current).DataTable();
+        }
+
+        return () => {
+            // Destroy DataTable when component unmounts
+            if ($.fn.DataTable.isDataTable(tableRef.current)) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
+                $(tableRef.current).DataTable().destroy();
+            }
+        };
+    }, [products])
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -18,6 +38,7 @@ const AdminProducts = () => {
                         quantity: 100,
                         originalPrice: 1199.99,
                         discountPrice: 999.99,
+                        date:"11/03/2024",
                         stock: 1
                     },
                     {
@@ -28,6 +49,7 @@ const AdminProducts = () => {
                         quantity: 50,
                         originalPrice: 1499.99,
                         discountPrice: 1399.99,
+                        date:"10/03/2024",
                         stock: 2
                     },
                     {
@@ -38,6 +60,7 @@ const AdminProducts = () => {
                         quantity: 200,
                         originalPrice: 129.99,
                         discountPrice: 109.99,
+                        date:"12/03/2024",
                         stock: 0
                     },
                     {
@@ -48,6 +71,7 @@ const AdminProducts = () => {
                         quantity: 30,
                         originalPrice: 499.99,
                         discountPrice: 449.99,
+                        date:"09/03/2024",
                         stock: 4
                     },
                     {
@@ -58,6 +82,7 @@ const AdminProducts = () => {
                         quantity: 80,
                         originalPrice: 349.99,
                         discountPrice: 299.99,
+                        date:"13/03/2024",
                         stock: 1
                     },
                     {
@@ -68,6 +93,7 @@ const AdminProducts = () => {
                         quantity: 60,
                         originalPrice: 449.99,
                         discountPrice: 399.99,
+                        date:"10/03/2024",
                         stock: 0
                     },
                     {
@@ -78,6 +104,7 @@ const AdminProducts = () => {
                         quantity: 120,
                         originalPrice: 49.99,
                         discountPrice: 39.99,
+                        date:"08/03/2024",
                         stock: 7
                     },
                     {
@@ -88,6 +115,7 @@ const AdminProducts = () => {
                         quantity: 90,
                         originalPrice: 149.95,
                         discountPrice: 129.95,
+                        date:"09/03/2024",
                         stock: 9
                     },
                     {
@@ -98,6 +126,7 @@ const AdminProducts = () => {
                         quantity: 40,
                         originalPrice: 159.99,
                         discountPrice: 139.99,
+                        date:"07/03/2024",
                         stock: 3
                     },
                     {
@@ -108,6 +137,7 @@ const AdminProducts = () => {
                         quantity: 70,
                         originalPrice: 99.95,
                         discountPrice: 89.95,
+                        date:"14/03/2024",
                         stock: 1
                     }
                 ]);
@@ -125,39 +155,41 @@ const AdminProducts = () => {
             <div className="container mt-4">
                 <h1 className="mb-4 text-center text-purple">All Products</h1>
                 <div className="card table-responsive p-1">
-                    <table className="table bg-purple text-purple">
-                    <thead>
-                    <tr>
-                        <th className='text-purple'>#</th>
-                        <th className='text-purple'>Name</th>
-                        <th className='text-purple'>Category</th>
-                        <th className='text-purple'>Quantity</th>
-                        <th className='text-purple'>Original Price</th>
-                        <th className='text-purple'>Discount Price</th>
-                        <th className='text-purple'>Stock</th>
-                        <th className='text-purple'>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {products.map((product, index) => (
-                        <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{product.name}</td>
-                            <td>{product.category}</td>
-                            <td>{product.quantity}</td>
-                            <td>${product.originalPrice.toFixed(2)}</td>
-                            <td>${product.discountPrice.toFixed(2)}</td>
-                            <td>{product.stock}</td>
-                            <td>
-                                <Link to={`/products/${product.id}`} className="btn btn-purple btn-sm">View</Link>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
+                    <table ref={tableRef} className="table table-hover table-striped bg-purple text-purple">
+                        <thead>
+                            <tr>
+                                <th className='text-purple'>#</th>
+                                <th className='text-purple'>Name</th>
+                                <th className='text-purple'>Category</th>
+                                <th className='text-purple'>Quantity</th>
+                                <th className='text-purple'>Original</th>
+                                <th className='text-purple'>Discount</th>
+                                <th className='text-purple'>Stock</th>
+                                <th className='text-purple'>Date</th>
+                                <th className='text-purple'>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {products.map((product, index) => (
+                                <tr key={index}>
+                                    <td>{index + 1}</td>
+                                    <td>{product.name}</td>
+                                    <td>{product.category}</td>
+                                    <td>{product.quantity}</td>
+                                    <td>${product.originalPrice.toFixed(2)}</td>
+                                    <td>${product.discountPrice.toFixed(2)}</td>
+                                    <td>{product.date}</td>
+                                    <td>{product.stock}</td>
+                                    <td>
+                                        <Link to={`/products/${product.id}`} className="btn btn-purple btn-sm">View</Link>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

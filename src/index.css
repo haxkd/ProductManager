@@ -43,9 +43,19 @@ code {
 .btn-purple{
   background-color: var(--purple) !important;
   color: whitesmoke!important;
+  transition: all 0.3s ease;
+}
+.btn-purple:hover{
+  box-shadow: 0 0 10px var(--purple) !important;
+  
 }
 
 .form-control{
   border: 1px solid rgb(183, 119, 250)!important;
   color: rgb(83, 41, 128) !important;
+}
+
+
+table.table.dataTable>:not(caption)>*>* {
+    background-color: white!important;
 }

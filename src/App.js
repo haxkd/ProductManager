@@ -4,6 +4,7 @@ import AdminDashboard from './Components/AdminDashboard';
 import AdminProducts from './Components/AdminProducts'
 import AdminProduct from './Components/AdminProduct';
 import AdminOrders from './Components/AdminOrders';
+import { ToastContainer } from 'react-toastify';
 
 /*
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/products/:id" element={<AdminProduct />} />
         <Route path="/orders" element={<AdminOrders />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 }
