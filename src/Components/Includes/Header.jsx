@@ -14,6 +14,7 @@ function Header() {
             <Link className='nav-link' to="/products">Products</Link>
             <Link className='nav-link' to="/orders">Orders</Link>
             <Link className='nav-link' to="/users">Users</Link>
+            <Link className='nav-link' to="/messages">Messages</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

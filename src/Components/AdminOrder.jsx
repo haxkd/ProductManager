@@ -6,7 +6,17 @@ import { toast } from 'react-toastify';
 const AdminOrder = () => {
 
 
-    const [editedOrder, setEditedOrder] = useState({});
+    const [editedOrder, setEditedOrder] = useState({
+        id: "",
+        productName: "",
+        customerName: "",
+        address: "",
+        orderDate: "",
+        totalAmount: "",
+        quantity: "",
+        paymentType: "",
+        status: ""
+    });
 
     useEffect(() => {
         const fetchOrder = async () => {

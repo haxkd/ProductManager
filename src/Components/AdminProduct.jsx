@@ -4,7 +4,17 @@ import Footer from './Includes/Footer';
 import { toast } from 'react-toastify';
 
 const AdminProduct = () => {
-    const [editedProduct, setEditedProduct] = useState({});
+    const [editedProduct, setEditedProduct] = useState({
+        id: "",
+        name: '',
+        description: '',
+        category: '',
+        quantity: "",
+        sold: "",
+        originalPrice: "",
+        discountPrice: "",
+        stock: ""
+    });
 
     useEffect(() => {
         const fetchProduct = async () => {

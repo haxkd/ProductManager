@@ -4,7 +4,17 @@ import Footer from './Includes/Footer';
 import {  toast } from 'react-toastify';
 
 const AdminUser = () => {
-    const [editedUser, setEditedUser] = useState({});
+    const [editedUser, setEditedUser] = useState({
+        id: "",
+        name: "",
+        email: "",
+        mobile: "",
+        gender: "",
+        status: "",
+        registrationDate: "",
+        address: "",
+        image: ""
+      });
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -14,7 +24,7 @@ const AdminUser = () => {
                     name: "Jane Smith",
                     email: "jane.smith@example.com",
                     mobile: "+91 9876543211",
-                    gender: "female",
+                    gender: "male",
                     status: "block",
                     registrationDate: "10-02-2022",
                     address: "456, Park Avenue, Mumbai, Maharashtra - 400001",

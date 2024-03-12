@@ -1,4 +1,6 @@
 import './App.css';
+import React from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import AdminDashboard from './Components/AdminDashboard';
 import AdminProducts from './Components/AdminProducts'
@@ -8,6 +10,8 @@ import { ToastContainer } from 'react-toastify';
 import AdminOrder from './Components/AdminOrder';
 import AdminUsers from './Components/AdminUsers';
 import AdminUser from './Components/AdminUser';
+import AdminMessages from './Components/AdminMessages';
+import AdminMessage from './Components/AdminMessage';
 
 /*
 
@@ -37,8 +41,10 @@ import AdminUser from './Components/AdminUser';
 */
 
 function App() {
+
   return (
     <>
+    
       <Routes>
         <Route path="/" element={<AdminDashboard />} />
         <Route path="/products/" element={<AdminProducts />} />
@@ -47,6 +53,8 @@ function App() {
         <Route path="/orders/:id" element={<AdminOrder />} />
         <Route path="/users/" element={<AdminUsers />} />
         <Route path="/users/:id" element={<AdminUser />} />
+        <Route path="/messages/" element={<AdminMessages />} />
+        <Route path="/messages/:id" element={<AdminMessage />} />
       </Routes>
       <ToastContainer />
     </>

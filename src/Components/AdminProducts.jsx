@@ -156,6 +156,7 @@ const AdminProducts = () => {
         fetchProducts();
     }, []);
 
+    
     return (
         <>
             <Header />
