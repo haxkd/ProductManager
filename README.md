@@ -1,6 +1,6 @@
 
 ## Product Manager
-This is a app for the "Product Managermenet" in React(Static) [more](#interacting-with-the-website). <br>
+This is a app for the "Product Managermenet" in React(Static) [more](#usage). <br>
 
 
 ## Table of Contents
@@ -66,4 +66,13 @@ This is a app for the "Product Managermenet" in React(Static) [more](#interactin
 
 
 ## Screenshots
-- Dashboard
+- Dashboard(Desktop)
+![DashboardDesktop](screenshots/DashboardDesktop1.png)
+![DashboardDesktop](screenshots/DashboardDesktop2.png)
+![DashboardDesktop](screenshots/DashboardDesktop3.png)
+
+
+- Dashboard(Mobile)
+![DashboardDesktop](screenshots/DashboardMobile1.jpg)
+![DashboardDesktop](screenshots/DashboardMobile2.jpg)
+![DashboardDesktop](screenshots/DashboardMobile3.jpg)
