@@ -78,3 +78,6 @@ table.table.dataTable>:not(caption)>*>* {
 .gap-10{
   gap: 10px;
 }
+table {
+  width: 100%!important;
+}

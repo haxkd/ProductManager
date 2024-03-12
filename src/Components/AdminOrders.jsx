@@ -13,7 +13,7 @@ const AdminOrders = () => {
 
     useEffect(() => {
         if (orders.length > 0 && tableRef.current) {
-            $(tableRef.current).DataTable();
+            $(tableRef.current).DataTable({scrollX:true});
         }
         return () => {
             if ($.fn.DataTable.isDataTable(tableRef.current)) {

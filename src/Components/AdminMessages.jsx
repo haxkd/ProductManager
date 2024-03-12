@@ -13,7 +13,7 @@ const AdminMessages = () => {
 
   useEffect(() => {
       if (messages.length > 0 && tableRef.current) {
-          $(tableRef.current).DataTable();
+          $(tableRef.current).DataTable({scrollX:true});
       }
 
       return () => {
