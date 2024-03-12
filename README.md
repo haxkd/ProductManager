@@ -25,12 +25,13 @@ Their is :
    git clone https://github.com/haxkd/ProductManager.git
 
 2. Navigate to the project directory:
-    ```cd ProductManager```
+   ```bash
+      cd ProductManager
 
-3. Install dependencies:
+4. Install dependencies:
     ```npm install```
 
-4. Start the development server:
+5. Start the development server:
     ```npm start```
 
 
