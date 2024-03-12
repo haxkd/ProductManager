@@ -1,6 +1,6 @@
 
 ## Product Manager
-// This is a app for the "Product Managermenet" in React(Static).
+This is a app for the "Product Managermenet" in React(Static).<br>
 Their is :
 - Dashboard - Provides an overview of the data , sales, Users, Top Products, notifications, Orders by date in the calender.
 - Products Management - Allows for the management of product listings (edit deelete).
