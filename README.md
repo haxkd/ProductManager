@@ -1,3 +1,51 @@
+
+## Product Manager
+// This is a app for the "Product Managermenet" in React(Static).
+Their is :
+- Dashboard - Provides an overview of the data , sales, Users, Top Products, notifications, Orders by date in the calender.
+- Products Management - Allows for the management of product listings (edit deelete).
+- Orders Management - Facilitates viewing and handling orders.
+- Users Management - Handles user accounts to see their details and update it.
+- Messages - Showing the messages which were sent by user(through contact us page).
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/haxkd/ProductManager.git
+
+2. Navigate to the project directory:
+    ```cd ProductManager```
+
+3. Install dependencies:
+    ```npm install```
+
+4. Start the development server:
+    ```npm start```
+
+
+## Technologies Used
+- React
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Chart.js 
+- JQuery DataTable
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
