@@ -26,13 +26,15 @@ Their is :
 
 2. Navigate to the project directory:
    ```bash
-      cd ProductManager
+   cd ProductManager
 
 4. Install dependencies:
-    ```npm install```
+   ```bash
+   npm install
 
-5. Start the development server:
-    ```npm start```
+6. Start the development server:
+   ```bash
+   npm start
 
 
 ## Technologies Used
