@@ -1,6 +1,6 @@
 
 ## Product Manager
-This is a app for the "Product Managermenet" in React(Static).<br>
+This is a app for the "Product Managermenet" in React(Static) [more](#interacting-with-the-website). <br>
 
 
 ## Table of Contents
@@ -9,6 +9,7 @@ This is a app for the "Product Managermenet" in React(Static).<br>
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [Interacting](#interacting-with-the-website)
+- [Screenshots](#screenshots)
 
 ## Installation
 
@@ -62,3 +63,7 @@ This is a app for the "Product Managermenet" in React(Static).<br>
 
 ### View Results:
 - View the results or responses on the website interface.
+
+
+## Screenshots
+- Dashboard
