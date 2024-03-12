@@ -11,19 +11,6 @@ const AdminProducts = () => {
   const tableRef = useRef(null);
 
   useEffect(() => {
-    if (products.length > 0 && tableRef.current) {
-      $(tableRef.current).DataTable({scrollX:true});
-    }
-
-    return () => {
-      if ($.fn.DataTable.isDataTable(tableRef.current)) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        $(tableRef.current).DataTable().destroy();
-      }
-    };
-  }, [products]);
-
-  useEffect(() => {
     const fetchProducts = async () => {
       try {
         setProducts([
@@ -39,6 +26,7 @@ const AdminProducts = () => {
             discountPrice: 999.99,
             date: "11/03/2024",
             stock: 1,
+            image:"https://picsum.photos/150?random=1"
           },
           {
             id: 2,
@@ -52,6 +40,7 @@ const AdminProducts = () => {
             discountPrice: 1399.99,
             date: "10/03/2024",
             stock: 2,
+            image:"https://picsum.photos/150?random=2"
           },
           {
             id: 3,
@@ -65,6 +54,7 @@ const AdminProducts = () => {
             discountPrice: 109.99,
             date: "12/03/2024",
             stock: 0,
+            image:"https://picsum.photos/150?random=3"
           },
           {
             id: 4,
@@ -78,6 +68,7 @@ const AdminProducts = () => {
             discountPrice: 449.99,
             date: "09/03/2024",
             stock: 4,
+            image:"https://picsum.photos/150?random=4"
           },
           {
             id: 5,
@@ -91,6 +82,7 @@ const AdminProducts = () => {
             discountPrice: 299.99,
             date: "13/03/2024",
             stock: 1,
+            image:"https://picsum.photos/150?random=5"
           },
           {
             id: 6,
@@ -104,6 +96,7 @@ const AdminProducts = () => {
             discountPrice: 399.99,
             date: "10/03/2024",
             stock: 0,
+            image:"https://picsum.photos/150?random=6"
           },
           {
             id: 7,
@@ -117,6 +110,7 @@ const AdminProducts = () => {
             discountPrice: 39.99,
             date: "08/03/2024",
             stock: 7,
+            image:"https://picsum.photos/150?random=7"
           },
           {
             id: 8,
@@ -130,6 +124,7 @@ const AdminProducts = () => {
             discountPrice: 129.95,
             date: "09/03/2024",
             stock: 9,
+            image:"https://picsum.photos/150?random=8"
           },
           {
             id: 9,
@@ -143,6 +138,7 @@ const AdminProducts = () => {
             discountPrice: 139.99,
             date: "07/03/2024",
             stock: 3,
+            image:"https://picsum.photos/150?random=9"
           },
           {
             id: 10,
@@ -156,6 +152,7 @@ const AdminProducts = () => {
             discountPrice: 89.95,
             date: "14/03/2024",
             stock: 1,
+            image:"https://picsum.photos/150?random=10"
           },
         ]);
       } catch (error) {
@@ -166,12 +163,28 @@ const AdminProducts = () => {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    if (products.length > 0 && tableRef.current) {
+      $(tableRef.current).DataTable({ scrollX: true });
+    }
+    return () => {
+      if ($.fn.DataTable.isDataTable(tableRef.current)) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        $(tableRef.current).DataTable().destroy();
+      }
+    };
+  }, [products]);
+
   return (
     <>
       <Header />
       <div className="container mt-4">
         <h1 className="text-center text-purple mainheading">Products</h1>
         <div className="card p-1">
+          <div className="card-header">
+
+          <Link to='/addproduct' className="btn btn-outline-success">Add</Link>
+          </div>
           <div className="table-responsive">
             <table
               ref={tableRef}
@@ -180,6 +193,7 @@ const AdminProducts = () => {
               <thead>
                 <tr>
                   <th className="text-purple">#</th>
+                  <th className="text-purple">Image</th>
                   <th className="text-purple">Name</th>
                   <th className="text-purple">Category</th>
                   <th className="text-purple">Quantity</th>
@@ -194,6 +208,7 @@ const AdminProducts = () => {
                 {products.map((product, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
+                    <td><img src={product.image} alt={product.name} style={{width:"30px",height:"30px"}}/></td>
                     <td>{product.name}</td>
                     <td>{product.category}</td>
                     <td>{product.quantity}</td>

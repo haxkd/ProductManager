@@ -12,6 +12,7 @@ import AdminUsers from './Components/AdminUsers';
 import AdminUser from './Components/AdminUser';
 import AdminMessages from './Components/AdminMessages';
 import AdminMessage from './Components/AdminMessage';
+import AdminAddProduct from './Components/AdminAddProduct';
 
 /*
 
@@ -47,6 +48,7 @@ function App() {
     
       <Routes>
         <Route path="/" element={<AdminDashboard />} />
+        <Route path="/addproduct" element={<AdminAddProduct />} />
         <Route path="/products/" element={<AdminProducts />} />
         <Route path="/products/:id" element={<AdminProduct />} />
         <Route path="/orders/" element={<AdminOrders />} />
