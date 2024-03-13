@@ -135,7 +135,7 @@ const AdminProduct = () => {
                             <button type="submit" className="btn btn-purple" onClick={handleUpdate}>Update Product</button>
                         </div>
                         <div className="col-6 text-center">
-                            <button type="submit" className="btn btn-outline-danger" onClick={handleDelete}>Delete Product</button>
+                            <button type="button" className="btn btn-outline-danger" onClick={handleDelete}>Delete Product</button>
                         </div>
                     </div>
                 </form>
