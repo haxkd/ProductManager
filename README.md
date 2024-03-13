@@ -2,6 +2,8 @@
 ## Product Manager
 This is a app for the "Product Managermenet" in React(Static) [more](#usage). <br>
 
+Deployment : [![Netlify Status](https://api.netlify.com/api/v1/badges/ef24b062-c047-4642-983e-85223581ccbf/deploy-status)](https://app.netlify.com/sites/kdproduct/deploys) <br>
+Test Live : [https://kdproduct.netlify.app/](https://kdproduct.netlify.app/)
 
 ## Table of Contents
 
